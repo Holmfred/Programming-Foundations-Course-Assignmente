@@ -61,9 +61,53 @@ for (var i = 0; i < games.length; i++){
 
 // Question 4
 
+
+function whatIdontLike(things) {
+	var typeofThings = typeof things;
+
+	if (typeofThings !== "string"){
+		console.log("Please send in a string")
+	} else {
+		console.log("I don't like" + " " + things)
+	}
+}
+
+whatIdontLike("apes")
+
 // Question 5
 
+function question5(num1, num2){
+    var convertNum1 = parseFloat(num1);
+    var convertNum2 = parseFloat(num2);
+
+    if (isNaN(convertNum1) || isNaN(convertNum2)) {
+        return "Invalid argumet"
+    }
+
+	return convertNum1 - convertNum2;
+}
+
+var result = document.querySelector("#subtraction");
+var sum = question5 (80, 20);
+subtraction.innerHTML = sum;
+
 // Question 6
+
+var button = document.querySelector(".page");
+
+function changeEverything(){
+	document.title = "Updated title";
+	document.body.style.backgroundColor = "yellow";
+	document.querySelector("h1").style.color = "green"
+	document.querySelector("h1").style.fontFamily = "impact"
+	document.querySelector("h1")
+	document.querySelector("ul").style.paddingInlineStart = "0px"
+	document.querySelector("ul").style.listStyle = "none"
+}
+
+button.onclick = changeEverything
+
+
 
 // Question 7
 
@@ -85,3 +129,23 @@ var toys = [
 		price: 89.99,
 	},
 ];
+
+var price1 = parseFloat(toys[0].price);
+var price2 = parseFloat(toys[1].price);
+var price3 = parseFloat(toys[2].price);
+var price4 = parseFloat(toys[3].price);
+
+var totalPrice = price1 + price2 + price4;
+
+var button = document.querySelector(".price");
+var total = document.querySelector("#total")
+
+button.onclick = clicked;
+
+function clicked() {
+    for (var i = 0; i < toys.length; i++) {
+        var price = toys[i].price;
+    }
+
+    total.innerHTML = totalPrice;
+}
