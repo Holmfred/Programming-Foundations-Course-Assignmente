@@ -100,9 +100,10 @@ function changeEverything(){
 	document.body.style.backgroundColor = "yellow";
 	document.querySelector("h1").style.color = "green";
 	document.querySelector("h1").style.fontFamily = "impact";
+	document.querySelector("h1").innerHTML = "<a href='#'>Programming foundations Course Assignment</a>";
 	document.querySelector("ul").style.paddingInlineStart = "0px";
 	document.querySelector("ul").style.listStyle = "none";
-	document.querySelector("h1").innerHTML = "<a href='#'>Programming foundations Course Assignment</a>";
+}
 
 button.onclick = changeEverything
 
